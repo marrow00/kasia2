@@ -1,0 +1,40 @@
+// @use "scss/variables";
+
+$red2: #b5120b;
+
+section{
+    overflow: hidden;
+}
+.home{
+    height: 100vh;
+    min-height: 500px;
+}
+.home-info{
+    top:15%;
+    // top: 20%;
+    z-index: 9;
+}
+.bg-only{
+    width: 53%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.img-bg{
+    width: 70%;
+    top: 40%;
+    left:0
+    // width: 60%;
+    // top:10%;
+    // left: 25%;
+}
+.img-main{
+    bottom:2rem;
+    left: 10%;
+    // top: 25%;
+    // left: 40%;
+}
+h1{
+    color: $red2;
+}
