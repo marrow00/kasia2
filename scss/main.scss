@@ -1,9 +1,10 @@
-// @use "scss/variables";
-
-$red2: #b5120b;
+@import "variables";
 
 section{
     overflow: hidden;
+}
+a{
+    color: $dark;
 }
 .home{
     height: 100vh;
@@ -11,29 +12,41 @@ section{
 }
 .home-info{
     top:15%;
-    // top: 20%;
-    z-index: 9;
+    z-index: 2;
+    transform: translateX(-105%);
 }
-.bg-only{
-    width: 53%;
+.slide-in{
+    animation: slideIn 2s forwards;
+}
+@keyframes slideIn{
+    100% {transform: translateX(0%);}
+}
+.bg-only-light{
     min-height: 100vh;
-    top: 0;
-    left: 0;
+    z-index: -2;
+}
+.bg-only-dark{
+    min-height: 80vh;
+    background: $red2;
+    right:0;
+    top: 4rem;
     z-index: -1;
 }
 .img-bg{
-    width: 70%;
+    width: 75%;
     top: 40%;
-    left:0
+    left:1rem;
     // width: 60%;
     // top:10%;
     // left: 25%;
 }
 .img-main{
-    bottom:2rem;
-    left: 10%;
-    // top: 25%;
-    // left: 40%;
+    bottom:1rem;
+    right: 0;
+    transform: translateX(100%);
+    @media (min-width:$md){
+        right: 1rem;
+    }
 }
 h1{
     color: $red2;
