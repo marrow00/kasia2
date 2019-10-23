@@ -1,5 +1,7 @@
 @import "variables";
-
+html,body {
+    height:100%;
+}
 section{
     overflow: hidden;
 }
@@ -14,6 +16,10 @@ a{
     top:15%;
     z-index: 2;
     transform: translateX(-105%);
+    mix-blend-mode: multiply;
+    span{
+        color:$red2;
+    }
 }
 .slide-in{
     animation: slideIn 2s forwards;
@@ -41,13 +47,28 @@ a{
     // left: 25%;
 }
 .img-main{
-    bottom:1rem;
+    bottom:0;
     right: 0;
     transform: translateX(100%);
     @media (min-width:$md){
         right: 1rem;
+        bottom: 1rem;
     }
 }
 h1{
     color: $red2;
+}
+.f-5{
+    font-size: 5rem;
+}
+.teaching{
+    min-height: 7rem;
+    h2{
+        color: $gray;
+        right: 0;
+        margin: 0
+    }
+    p{
+        margin: 0;
+    }
 }
