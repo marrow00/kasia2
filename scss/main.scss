@@ -1,13 +1,6 @@
 @import "variables";
-html,body {
-    height:100%;
-}
-section{
-    overflow: hidden;
-}
-a{
-    color: $dark;
-}
+@import "layout";
+
 .home{
     height: 100vh;
     min-height: 500px;
@@ -15,7 +8,7 @@ a{
 .home-info{
     top:15%;
     z-index: 2;
-    transform: translateX(-105%);
+    transform: translateX(-100%);
     mix-blend-mode: multiply;
     span{
         color:$red2;
@@ -27,7 +20,12 @@ a{
 @keyframes slideIn{
     100% {transform: translateX(0%);}
 }
+
+h1{
+    font-size: 2.5rem;
+}
 .bg-only-light{
+    background: $light;
     min-height: 100vh;
     z-index: -2;
 }
@@ -62,13 +60,17 @@ h1{
     font-size: 5rem;
 }
 .teaching{
-    min-height: 7rem;
+    min-height: 7.5rem;
     h2{
         color: $gray;
         right: 0;
-        margin: 0
+        margin: 0;
+        z-index: -1;
     }
     p{
         margin: 0;
+    }
+    >div{
+        min-height: 7.5rem;
     }
 }

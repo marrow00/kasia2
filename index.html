@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +7,41 @@
     <meta description="Katarzyna Gwóźdź doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://if.pwr.edu.pl/~gwozdz/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Katarzyna Gwóźdź | WPPT, PWR</title>
 </head>
 <body>
     <header>
-        <nav class="navbar bg-transparent position-fixed">
-            <a href="" class="nav-link">główna</a>
-            <a href="" class="nav-link">dydaktyka</a>
-            <a href="" class="nav-link">artykuły</a>
-            <a href="" class="nav-link">hobby</a>
-            <a href="" class="nav-link">kontakt</a>
+        <nav class="navbar navbar is-fixed-top">
+            <a href="" class="navbar-item">główna</a>
+            <a href="" class="navbar-item">dydaktyka</a>
+            <a href="" class="navbar-item">artykuły</a>
+            <a href="" class="navbar-item">hobby</a>
+            <a href="" class="navbar-item">kontakt</a>
         </nav>
     </header>
-    <section class="home position-relative">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8 bg-light bg-only-light"></div>
-                <div class="col-7 position-absolute bg-only-dark"></div>
-                <div class="position-absolute pl-5 home-info slide-in">
+    <section class="home is-relative">
+        <div class="container is-fullhd">
+            <div class="columns">
+                <div class="column is-two-thirds bg-only-light"></div>
+                <div class="column is-three-fifths is-absolute bg-only-dark"></div>
+                <div class="is-absolute pl-1 home-info slide-in">
                     <h1>Katarzyna <br> Gwóźdź</h1>
                     <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl">katarzyna.<span>r</span>.gwozdz@pwr.edu.pl</a>
                 </div>
-                <img src="img/bg.png" class="img-fluid position-absolute img-bg">
-                <img src="img/kasia2.JPG" class="img-fluid position-absolute img-main slide-in">
+                <img src="img/bg.png" class="img-fluid is-absolute img-bg">
+                <img src="img/kasia2.JPG" class="img-fluid is-absolute img-main slide-in">
             </div>
         </div>
     </section>
-    <section class="teaching position-relative">
-        <h2 id=teaching-header class="f-5 position-absolute">dydaktyka</h2>
-        <div class="container-fluid h-100 py-3">
-            <div class="row">
-                <div class="col align-self-center text-center"><p>Komputerowe wspomaganie eksperymentu Labview</p></div>
-                <div class="col align-self-center text-center"><p>Metody symulacji fotoogniw</p></div>
-                <div class="col align-self-center text-center"><p>Laboratorium NLTK</p></div>
-            </div>
+    <section class="teaching is-relative">
+        <h2 id=teaching-header class="f-5 is-absolute">dydaktyka</h2>
+        <div class="columns">
+            <div class="column is-vcentered align-self-center text-center"><p>Komputerowe wspomaganie eksperymentu Labview</p></div>
+            <div class="column is-vcentered align-self-center text-center"><p>Metody symulacji fotoogniw</p></div>
+            <div class="column is-vcentered align-self-center text-center"><p>Laboratorium NLTK</p></div>
         </div>
     </section>
     <section>
@@ -54,9 +53,9 @@
     <section>hobby</section>
     <section>kontakt</section>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
     <script>
         
         window.addEventListener('scroll', ()=>{
