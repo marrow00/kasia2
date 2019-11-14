@@ -1,6 +1,11 @@
 @import "variables";
 @import "layout";
-
+body{
+    font-family: $body;
+}
+.navbar-item{
+    font-size: 12px;
+}
 .home{
     height: 100vh;
     min-height: 500px;
@@ -21,9 +26,6 @@
     100% {transform: translateX(0%);}
 }
 
-h1{
-    font-size: 2.5rem;
-}
 .bg-only-light{
     background: $light;
     min-height: 100vh;
@@ -38,11 +40,8 @@ h1{
 }
 .img-bg{
     width: 75%;
-    top: 40%;
+    top: 50%;
     left:1rem;
-    // width: 60%;
-    // top:10%;
-    // left: 25%;
 }
 .img-main{
     bottom:0;
@@ -52,9 +51,6 @@ h1{
         right: 1rem;
         bottom: 1rem;
     }
-}
-h1{
-    color: $red2;
 }
 .f-5{
     font-size: 5rem;
@@ -74,3 +70,5 @@ h1{
         min-height: 7.5rem;
     }
 }
+
+
