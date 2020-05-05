@@ -7,8 +7,7 @@
     <meta description="Katarzyna Gwóźdź doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://if.pwr.edu.pl/~gwozdz/">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Katarzyna Gwóźdź | WPPT, PWR</title>
 </head>
@@ -23,21 +22,24 @@
         </nav>
     </header>
     <section class="home is-relative">
-        <div class="container is-fullhd h-100">
-            <div class="d-flex h-100 w-100">
-                <div class="column is-two-thirds bg-only-light"></div>
-                <div class="column is-three-fifths is-absolute bg-only-dark"></div>
-                <div class="is-absolute pl-1 home-info slide-in">
+        <div class="h-100">
+            <!-- <div class="h-100 w-100"> -->
+                <!-- <div class="column is-two-thirds bg-only-light"></div> -->
+                <!-- <div class="column is-three-fifths is-absolute bg-only-dark"></div> -->
+                <div class="is-absolute pl-1 home-info">
                     <h1>Katarzyna <br> Gwóźdź</h1>
+                    <p>doktorantka fizyki na WPPT</p>
                     <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl">katarzyna.<span>r</span>.gwozdz@pwr.edu.pl</a>
                 </div>
-                <img src="img/bg.png" class="img-fluid is-absolute img-bg">
-                <img src="img/kasia2.JPG" class="img-fluid is-absolute img-main slide-in">
-            </div>
+                <img src="img/kasia3.JPG" class="img-fluid is-absolute img-main">
+                <div class="banner">
+                    <img src="img/bg.png" class="img-fluid img-bg">                    
+                </div>
+            <!-- </div> -->
         </div>
     </section>
     <section class="teaching is-relative">
-        <h2 id=teaching-header class="f-5 is-absolute">dydaktyka</h2>
+        <h2 id=teaching-header>dydaktyka</h2>
         <div class="d-flex">
             <div class="column is-vcentered align-self-center has-text-centered"><p>Komputerowe wspomaganie eksperymentu Labview</p></div>
             <div class="column is-vcentered align-self-center has-text-centered"><p>Metody symulacji fotoogniw</p></div>
@@ -81,17 +83,12 @@
     <section>hobby</section>
     <section>kontakt</section>
     <footer></footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
     <script>
-        
         window.addEventListener('scroll', ()=>{
             let el =document.getElementById('teaching-header');
             let count = window.innerWidth - el.clientWidth
             el.style.transform = 'translateX(-'+ (0.5*window.scrollY) + 'px)'
         })
-        
     </script>
 </body>
 </html>
