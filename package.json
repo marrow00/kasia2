@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marrow00/kasia2.git"
+    "url": "git+https://github.com/codestance/kasia2.git"
   },
   "author": "",
   "license": "ISC",
@@ -21,9 +21,13 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-sass": "^4.0.2"
-  }
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": [
+    ">1%",
+    "last 2 versions"
+  ]
 }
