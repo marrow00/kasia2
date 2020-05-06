@@ -1,64 +1,143 @@
+@import "reset";
 @import "variables";
-@import "layout";
+@import "nav";
+html{
+    font-size: 16px;
+    @media (min-width: $xl){
+        font-size: 18px;
+    }
+}
 body{
-    font-family: $body;
+    font-family: $bodyFont;
 }
-.navbar-item{
-    font-size: 12px;
+h1{
+    font-size: 2.5rem;
+    color: $red2;
+    font-family: $headingFont;
 }
+a{
+    color: $dark;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+.align-self-center{
+    align-self: center;
+}
+
 .home{
+    position: relative;
     height: 100vh;
     min-height: 500px;
 }
 .home-info{
-    top:15%;
-    z-index: 2;
-    transform: translateX(-100%);
+    position: relative;
+    padding: 4em 0 0 6em;
+    z-index: 3; 
     mix-blend-mode: multiply;
-    span{
-        color:$red2;
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        background: $red2;
+        width: 5em;
+        height: 6em;
+    }
+    h1{
+        line-height: 1em;
+    }
+    p{
+        color:black;
+        margin: 0 0 -.5em 1.8em;
+    }
+    @media(min-width: $sm){
+        padding: 8em 0 0 12em;
+        &:before{
+            height: 4em;
+            top: 8em;
+        }
+    }
+    @media(min-width: $md){
+        padding: 8em 0 0 16em;
+    }
+    @media(min-width: $xl){
+        &:before{
+            height: 6em;
+            top: 7em;
+            width: 12em;
+        }
     }
 }
-.slide-in{
-    animation: slideIn 2s forwards;
-}
-@keyframes slideIn{
-    100% {transform: translateX(0%);}
-}
-
-.bg-only-light{
-    background: $light;
-    min-height: 100vh;
-    z-index: -2;
-}
-.bg-only-dark{
-    min-height: 80vh;
-    background: $red2;
-    right:0;
-    top: 4rem;
-    z-index: -1;
-}
-.img-bg{
-    width: 75%;
-    top: 50%;
-    left:1rem;
-}
-.img-main{
-    bottom:0;
+.home-img{
+    position: absolute;
+    top: 0;
     right: 0;
-    transform: translateX(100%);
-    @media (min-width:$md){
-        right: 1rem;
-        bottom: 1rem;
+    width: auto;
+    z-index: 2;
+    img{
+        max-height: 300px;
+    }
+    // @media(min-width: $sm){
+    //     top: 3em;
+    // }
+    @media(min-width: $md){
+        img{
+            max-height: none;
+        }
     }
 }
-.f-5{
-    font-size: 5rem;
+.banner{
+    position: absolute;
+    display: flex;
+    bottom: 2em;
+    width: 90%;
+    background: #373737;
+    .banner-img{
+        width: 12em;
+        height: 12em;
+        background: url('../img/bg.png')
+    }
+    a{
+        align-self: center;
+        margin: 3em auto;
+        position: relative;
+        white-space: nowrap;
+        color: $one;
+        z-index: 3;
+        &:before{
+            content:'';
+            position: absolute;
+            height: 3em;
+            width: 100%;
+            left:-1em;
+            top: -1em;
+            border: 1px solid $one;
+        }
+    }
+    @media (min-width: $sm){
+        width: 85%;
+    }
+    @media (min-width: $md){
+        bottom: 1em;
+    }
+    @media (min-width: $xl){
+        width: 80%;
+    }
 }
 .teaching{
-    min-height: 7.5rem;
+    position: relative;
+    min-height: 10em;
     h2{
-        color: $gray;
+        position: absolute;
+        font-size: 9.5em;
+        color: $light;
+        line-height: 1em;
         right: 0;
         margin: 0;
         z-index: -1;
@@ -67,18 +146,22 @@ body{
         margin: 0;
     }
     >div{
-        min-height: 7.5rem;
+        min-height: 10em;
     }
 }
 
 .art-box{
     overflow: hidden;
     position: relative;
-    // &::before{
-    //     content: "";
-    //     position: absolute;
-    //     top:0;
-    //     left: 0;
+    &::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 4em;
+        height: 100%;
+        display: block;
+        }
     }
     .art-box-years{
         position: absolute;
@@ -102,7 +185,6 @@ body{
             }
         }
     }
-}
 
 
 

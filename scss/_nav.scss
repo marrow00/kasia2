@@ -1,0 +1,26 @@
+nav{
+    position:fixed;
+    top:0;
+    display: flex;
+    padding: 1em 0;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 5;
+    min-width: 100%;
+    mix-blend-mode: multiply;
+    a{
+        padding: 0 .5em;
+    }
+    @media (min-width: 400px) {
+        padding: 1em 0.5em;
+    }
+    @media (min-width: $sm) {
+        padding: 1em 5em;
+    }
+    @media (min-width: $md){
+        min-width: 50%;
+    }
+    @media (min-width: $xl){
+        min-width: none;
+    }
+}
