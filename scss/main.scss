@@ -76,21 +76,32 @@ a{
 }
 .home-img{
     position: absolute;
-    top: 0;
+    // top: 3em;
     right: 0;
     width: auto;
     z-index: 2;
     img{
-        max-height: 300px;
+        max-height: 18em;
     }
-    // @media(min-width: $sm){
-    //     top: 3em;
+    @media(min-width: $sm){
+        top: 0;
+    }
+    // @media(min-width: $md) and (min-height: $sm){
+    //     img{
+    //         max-height: 20em;
+    //     }
     // }
-    @media(min-width: $md){
+    @media only screen and (min-width: $lg) and (orientation:landscape){
+        img{
+            max-height: 20em;
+        }
+    }
+    @media(min-width: $lg){
         img{
             max-height: none;
         }
     }
+    
 }
 .banner{
     position: absolute;
@@ -114,7 +125,7 @@ a{
             content:'';
             position: absolute;
             height: 3em;
-            width: 100%;
+            width: 82%;
             left:-1em;
             top: -1em;
             border: 1px solid $one;
@@ -132,21 +143,56 @@ a{
 }
 .teaching{
     position: relative;
-    min-height: 10em;
+    min-height: 7em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
     h2{
         position: absolute;
-        font-size: 9.5em;
+        font-size: 6.5em;
         color: $light;
         line-height: 1em;
         right: 0;
         margin: 0;
         z-index: -1;
     }
-    p{
-        margin: 0;
+    div{
+        min-height: 7em;
+        max-width: 10em;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 1em 1em;
+        padding: .5em;
+        border: 1px solid $red2;
     }
-    >div{
-        min-height: 10em;
+    @media (min-width: $md){
+        .teaching{
+            min-height: 9em
+            h2{
+                font-size: 8.5em;
+            }
+            div{
+                min-height: 9em;
+                max-width: 12em;
+            }
+        }
+    }
+    @media (min-width: $xl){
+        .teaching{
+            min-height: 10em
+            h2{
+                font-size: 9.5em;
+            }
+            div{
+                min-height: 10em;
+                max-width: 15em;
+            }
+        }
     }
 }
 

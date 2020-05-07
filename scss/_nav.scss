@@ -4,10 +4,10 @@ nav{
     display: flex;
     padding: 1em 0;
     justify-content: space-between;
-    background: transparent;
+    background: rgba(255,255,255,.7);
     z-index: 5;
     min-width: 100%;
-    mix-blend-mode: multiply;
+    // mix-blend-mode: multiply;
     a{
         padding: 0 .5em;
     }
@@ -15,12 +15,18 @@ nav{
         padding: 1em 0.5em;
     }
     @media (min-width: $sm) {
-        padding: 1em 5em;
+        min-width: 80%;
+        padding: 1em 3em;
     }
     @media (min-width: $md){
         min-width: 50%;
+        padding: 1em 5em;
     }
     @media (min-width: $xl){
-        min-width: none;
+        min-width: unset;
+        padding: 1em 0 1em 12em;
+        a{
+            padding: 0 1em;
+        }
     }
 }
