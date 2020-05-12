@@ -261,54 +261,18 @@ a{
         z-index: 1;
         display: flex;
         transition-property: transform;
-        // box-sizing: content-box;
         max-width: 100%;
         padding: 1em 1em 1em 4em;
         .articles-content_year{
+            display: none;
             height: auto;
-            // flex-shrink: 0;
             p{
                 font-weight: .9em;
+                padding-bottom: 1em;
             }
+        }
+        .active{
+            display: block
         }
     }
 }
-
-// .art-box{
-//     overflow: hidden;
-//     position: relative;
-//     &::before{
-//         content: "";
-//         position: absolute;
-//         top:0;
-//         left: 0;
-//         width: 4em;
-//         height: 100%;
-//         display: block;
-//         }
-//     }
-//     .art-box-years{
-//         position: absolute;
-//         top: 0;
-//         transform: rotate(90deg);
-//         transform-origin: left top 0;
-//         div{
-//             position: relative;
-//             display: inline-block;
-//             vertical-align: middle;
-//             background: chartreuse;
-//             // &::before{
-//             //     content:"";
-//             //     position: absolute;
-//             //     bottom:0;
-//             //     right:0;
-//             // }
-//             span{
-//                 display: inline-block;
-//                 vertical-align: middle;
-//             }
-//         }
-//     }
-
-
-
