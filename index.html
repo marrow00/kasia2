@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta description="Katarzyna Gwóźdź doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
+    <meta description="Katarzyna Gwóźdź - doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://if.pwr.edu.pl/~gwozdz/">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Katarzyna Gwóźdź | WPPT, PWR</title>
 </head>
 <body>
-    <nav class="navbar navbar is-fixed-top">
+    <nav>
         <a href="" class="navbar-item">główna</a>
-        <a href="" class="navbar-item">dydaktyka</a>
-        <a href="" class="navbar-item">artykuły</a>
+        <a href="#dydaktyka" class="navbar-item">dydaktyka</a>
+        <a href="#artykuly" class="navbar-item">artykuły</a>
         <a href="" class="navbar-item">hobby</a>
-        <a href="" class="navbar-item">kontakt</a>
+        <a href="#kontakt" class="navbar-item">kontakt</a>
     </nav>
     <section class="home">
         <div class="home-info">
@@ -32,7 +32,7 @@
             <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" role="button">wyślij wiadomość</a>                   
         </div>
     </section>
-    <section class="teaching">
+    <section class="teaching" id="#dydaktyka">
         <h2 class="mobile-header">
             <span>d</span>
             <span>y</span>
@@ -60,7 +60,7 @@
             tel: +48 576 058 319
         </a>
     </section>
-    <section class="articles">
+    <section class="articles" id="#artykuly">
         <h2>artykuły</h2>
         <div class="articles-years">
             <div class="articles-year"><span>2020</span></div>
@@ -199,9 +199,25 @@
             </div>
         </div>
     </section>
-    <section>hobby</section>
-    <section>kontakt</section>
-    <footer></footer>
+    <section class="contact" id="#kontakt">
+        <a target="_blank" rel="noopener" href="https://www.google.pl/maps/place/A-1,+wybrze%C5%BCe+Stanis%C5%82awa+Wyspia%C5%84skiego+27,+50-370+Wroc%C5%82aw/@51.1077021,17.0615193,18z/data=!3m1!4b1!4m5!3m4!1s0x470fe82a73eb172f:0x1c6df8655655e3c2!8m2!3d51.1078939!4d17.0616995" class="contact-content">
+            <span class="icon-map-marker"></span>
+            231a A1
+        </a>
+        <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" class="contact-content">
+            <span class="icon-envelope"></span>
+            katarzyna.r.gwozdz@pwr.edu.pl
+        </a>
+        <a href="tel:+48713202642" class="contact-content">
+            <span class="icon-phone"></span>
+            +48 71 320 26 42
+        </a>
+    </section>
+    <footer>
+        <a target="_blank" rel="noopener" href="http://lpf.wppt.pwr.edu.pl/index.php">LPF</a>
+        <a target="_blank" rel="noopener" href="http://www.leps.pwr.edu.pl/index.php">LEPS</a>
+        <p>K.R.G., 2020</p>
+    </footer>
     <script>
         window.addEventListener('scroll', ()=>{
             let el =document.getElementById('teaching-header');

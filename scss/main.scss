@@ -12,7 +12,7 @@ body{
 }
 h1{
     font-size: 2.5rem;
-    color: $red2;
+    color: $two;
     font-family: $headingFont;
 }
 a{
@@ -37,7 +37,7 @@ a{
         display: block;
         position: absolute;
         left: 0;
-        background: $red2;
+        background: $two;
         width: 5em;
         height: 6em;
     }
@@ -157,14 +157,14 @@ a{
     }
     a{
         min-height: 7em;
-        max-width: 10em;
+        // max-width: 10em;
         display: flex;
         justify-content: center;
         align-content: center;
         flex-direction: column;
         margin: 1em 1em;
         padding: .5em;
-        border: 1px solid $red2;
+        border: 1px solid $two;
     }
     @media (min-width: $sm){
         .mobile-header{
@@ -202,19 +202,19 @@ a{
 .articles{
     position: relative;
     overflow: hidden;
-    min-height: 30em;
-    &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
+    // min-height: 30em;
+    // &:before{
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    // }
     h2{
         font-size: 3em;
         padding: 0 2em;
-        color: $red2;
+        color: $two;
     }
     .articles-years{
         position: absolute;
@@ -226,11 +226,17 @@ a{
         transform-origin: left top 0;
         z-index: 10;
         white-space: nowrap;
+        background: $one;
+        &:before{
+            content:'';
+            position: relative;
+            width: 100%;
+
+        }
         div{
             display: inline-block;
             vertical-align: middle;
             line-height: 70px;
-            // font-family: din-condensed, sans-serif;
             letter-spacing: 3px;
             padding: 0 .5em;
             position: relative;
@@ -262,7 +268,7 @@ a{
         display: flex;
         transition-property: transform;
         max-width: 100%;
-        padding: 1em 1em 1em 4em;
+        padding: 1em 1em 1em 5em;
         .articles-content_year{
             display: none;
             height: auto;
@@ -274,5 +280,36 @@ a{
         .active{
             display: block
         }
+    }
+}
+.contact{
+    width: 100%;
+    min-height: 12em;
+    padding: 1em;
+    background: url(../img/contact.jpg) top left / contain no-repeat;
+    a{
+        // align-self: center;
+        // margin: 3em auto;
+        white-space: nowrap;
+        display: block;
+        padding: 1em 0;
+        color: $two;
+        span{
+            padding-right: .5em;
+        }
+    }
+    
+}
+
+footer{
+    padding: 1em;
+    background: $three;
+    color: white;
+    a{
+        color: white;
+        padding: 0 .5em;
+    }
+    p{
+        float: right;
     }
 }
