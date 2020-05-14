@@ -1,1 +1,1 @@
-new version of kasia
+new version of Kasia's website

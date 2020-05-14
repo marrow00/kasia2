@@ -286,10 +286,12 @@ a{
     width: 100%;
     min-height: 12em;
     padding: 1em;
-    background: url(../img/contact.jpg) top left / contain no-repeat;
+    text-align: right;
+    background-image: url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f7f7f7;
     a{
-        // align-self: center;
-        // margin: 3em auto;
         white-space: nowrap;
         display: block;
         padding: 1em 0;
@@ -297,6 +299,10 @@ a{
         span{
             padding-right: .5em;
         }
+    }
+    @media (min-width: $md){
+        padding: 1em 1em 1em 12em;
+        text-align: center;
     }
     
 }

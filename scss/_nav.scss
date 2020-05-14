@@ -4,10 +4,9 @@ nav{
     display: flex;
     padding: 1em 0;
     justify-content: space-between;
-    background: rgba(255,255,255,.7);
-    z-index: 5;
+    background: white;
+    z-index: 50;
     min-width: 100%;
-    // mix-blend-mode: multiply;
     a{
         padding: 0 .5em;
     }
