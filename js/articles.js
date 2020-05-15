@@ -12,12 +12,17 @@ const removeActive = function(list){
     list.forEach(element => element.classList.remove("active"))
 }
 const checkYear = function(){
-    let year = this.innerText
+    let year = this.innerText;
     let yearContent = content.filter(yearArticles => checkClass(year, yearArticles.classList))[0];
-    let isActive = checkClass("active", yearContent.classList)
+    let isActive = checkClass("active", yearContent.classList);
+    let activeYear = checkClass("active", this.classList);
     if(!isActive){
         removeActive(content)
         yearContent.classList.add("active")
+    }
+    if(!activeYear){
+        removeActive(years)
+        this.classList.add("active")
     }
     else return
 }
@@ -34,7 +39,7 @@ window.addEventListener('resize', setArticlesHeight);
 
 years.forEach(function(year){
     year.addEventListener('click', (evt) => {
-        checkYear.apply(evt.srcElement);
-        setArticlesHeight.apply(evt.srcElement);
+        checkYear.apply(evt.currentTarget);
+        setArticlesHeight.apply(evt.currentTarget);
     });
 })

@@ -16,7 +16,7 @@ h1{
     font-family: $headingFont;
 }
 a{
-    color: $dark;
+    color: $three;
 }
 .img-fluid{
     max-width: 100%;
@@ -45,7 +45,7 @@ a{
         line-height: 1em;
     }
     p{
-        color:black;
+        color:$three;
         margin: 0 0 -.5em 1.8em;
     }
     @media(min-width: $sm){
@@ -143,7 +143,7 @@ a{
         position: absolute;
         right: 0;
         font-size: 4em;
-        color: $light;
+        color: $one;
         line-height: 1em;
         margin: 0;
         z-index: -1;
@@ -211,7 +211,7 @@ a{
             width: 100%;
 
         }
-        div{
+        .articles-year{
             display: inline-block;
             vertical-align: middle;
             line-height: 70px;
@@ -219,16 +219,6 @@ a{
             padding: 0 .5em;
             position: relative;
             cursor: pointer;
-            &:before{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 0%;
-                // background: #f9fafa;
-                transition: height 150ms ease-out;
-            }
             span{
                 display: inline-block;
                 vertical-align: middle;
@@ -237,11 +227,14 @@ a{
                 transform: rotate(180deg);
             }
         }
+        .active{
+            background: $two;
+            color: white;
+        }
     }
     .articles-content{
         position: relative;
         width: 100%;
-        // height: 100%;
         z-index: 1;
         display: flex;
         transition-property: transform;
