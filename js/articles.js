@@ -1,8 +1,9 @@
-let years = document.getElementsByClassName('articles-year');
+let years = Array.from(document.getElementsByClassName('articles-year'));
 let content  = Array.from(document.getElementsByClassName('articles-content_year'));
 let yearsBox = document.getElementsByClassName('articles-years');
 let artSection = document.getElementsByClassName('articles');
 let artContent = document.getElementsByClassName('articles-content');
+let artHeader = document.getElementById('articles-header')
 
 const checkClass = function(element, list){
     return list.contains(element)
@@ -21,44 +22,19 @@ const checkYear = function(){
     else return
 }
 
-// Array.from(years).forEach(function(year){
-//     year.addEventListener('click', checkYear);
-// })
-
-// window.onload = setArticlesHeight()
-
-// function setArticlesHeight(){
-//     let done;
-//     return function(inProgress){
-//         if(done===undefined || inProgress){
-//             if (artSection[0].clientHeight < yearsBox[0].clientWidth){
-//                 artSection[0].setAttribute('style','height:'+yearsBox[0].clientWidth+'px');
-//                 done = true;
-//             }
-//         }
-//         return done;
-//     }
-    
-// }
 const setArticlesHeight = function(){
     if (artContent[0].clientHeight < yearsBox[0].clientWidth){
         artSection[0].setAttribute('style','height:'+yearsBox[0].clientWidth+'px');
     }else{
-        artSection[0].setAttribute('style','height:'+artContent[0].clientWidth+'px');
+        artSection[0].setAttribute('style','height:'+ (artContent[0].clientHeight + artHeader.clientHeight) +'px');
     }
-    // if(artSection[0].clientHeight < artContent[0].clientHeight){
-    //     artSection[0].setAttribute('style','height:'+artContent[0].clientWidth+'px');
-    // }
 }
 window.onload = setArticlesHeight();
-window.addEventListener("resize", setArticlesHeight);
+window.addEventListener('resize', setArticlesHeight);
 
-// Array.from(years).forEach(function(year){
-//     year.addEventListener('click', setArticlesHeight);
-// })
-Array.from(years).forEach(function(year){
-    year.addEventListener('click', () => {
-        checkYear;
-        setArticlesHeight;
+years.forEach(function(year){
+    year.addEventListener('click', (evt) => {
+        checkYear.apply(evt.srcElement);
+        setArticlesHeight.apply(evt.srcElement);
     });
 })
