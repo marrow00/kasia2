@@ -1,0 +1,31 @@
+nav{
+    position:fixed;
+    top:0;
+    display: flex;
+    padding: 1em 0;
+    justify-content: space-between;
+    background: white;
+    z-index: 50;
+    min-width: 100%;
+    a{
+        padding: 0 .5em;
+    }
+    @media (min-width: 400px) {
+        padding: 1em 0.5em;
+    }
+    @media (min-width: $sm) {
+        min-width: 80%;
+        padding: 1em 3em;
+    }
+    @media (min-width: $md){
+        min-width: 50%;
+        padding: 1em 5em;
+    }
+    @media (min-width: $xl){
+        min-width: unset;
+        padding: 1em 0 1em 12em;
+        a{
+            padding: 0 1em;
+        }
+    }
+}
