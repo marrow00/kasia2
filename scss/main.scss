@@ -248,6 +248,9 @@ a{
                 padding-bottom: 1em;
                 line-height: 1.5em;
             }
+            p:last-child{
+                padding: 0;
+            }
         }
         .active{
             display: block

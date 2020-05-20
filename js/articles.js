@@ -28,10 +28,11 @@ const checkYear = function(){
 }
 
 const setArticlesHeight = function(){
-    if (artContent[0].clientHeight < yearsBox[0].clientWidth){
+    let artBody = artContent[0].clientHeight + artHeader.clientHeight;
+    if (artBody < yearsBox[0].clientWidth){
         artSection[0].setAttribute('style','height:'+yearsBox[0].clientWidth+'px');
     }else{
-        artSection[0].setAttribute('style','height:'+ (artContent[0].clientHeight + artHeader.clientHeight) +'px');
+        artSection[0].setAttribute('style','height:'+ artBody +'px');
     }
 }
 window.onload = setArticlesHeight();
