@@ -1,0 +1,33 @@
+@import "const";
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1 0 auto;
+    padding: 3em 1em 1em 1em;
+    h1{
+        font-size: 2.5rem;
+        color: $two;
+        font-family: $headingFont;
+    }
+    section{
+        width: 100%;
+        columns: 15em 4;
+        column-gap: 1em;
+        column-rule: dotted $two;
+        padding: 1em 1em 0 1em;
+        a{
+           display: block;
+           padding: .5em 0;
+           &:hover{
+               color: $two;
+           }
+        }
+    }
+}
+footer{
+    flex-shrink: 0;
+}

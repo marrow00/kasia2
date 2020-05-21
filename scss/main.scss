@@ -1,23 +1,11 @@
-@import "reset";
-@import "variables";
-@import "nav";
-html{
-    font-size: 16px;
-    @media (min-width: $xl){
-        font-size: 18px;
-    }
-}
-body{
-    font-family: $bodyFont;
-}
+@import "const";
+
 h1{
     font-size: 2.5rem;
     color: $two;
     font-family: $headingFont;
 }
-a{
-    color: $three;
-}
+
 .img-fluid{
     max-width: 100%;
     height: auto;
@@ -26,6 +14,7 @@ a{
     position: relative;
     height: 100vh;
     min-height: 500px;
+    max-height: 1000px;
 }
 .home-info{
     position: relative;
@@ -248,6 +237,9 @@ a{
                 padding-bottom: 1em;
                 line-height: 1.5em;
             }
+            p:last-child{
+                padding: 0;
+            }
         }
         .active{
             display: block
@@ -275,19 +267,5 @@ a{
     @media (min-width: $md){
         padding: 1em 1em 1em 12em;
         text-align: center;
-    }
-    
-}
-
-footer{
-    padding: 1em;
-    background: $three;
-    color: white;
-    a{
-        color: white;
-        padding: 0 .5em;
-    }
-    p{
-        float: right;
     }
 }

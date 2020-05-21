@@ -1,0 +1,158 @@
+@import "const";
+.photos-box{
+	display: block;
+	width: 100%;
+	padding: 4em 1em 1em 1em;
+	@media(min-width: $sm){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: .7em;
+		align-items: center;
+	}
+	@media(min-width: $lg){
+		grid-template-columns: repeat(4,1fr);
+		padding: 4em 2em 2em 2em;
+	}
+}
+.photo-box{
+	justify-self: center;
+	padding-bottom: .5em;
+	@media(min-width: $sm){
+		padding: 0
+	}
+	div{
+		width: 100%;
+		position: relative;
+		.image{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: scale-down;
+		}
+	}
+}
+.photo-box:nth-child(10){
+	grid-row: span 2;
+}
+.photo-box:nth-child(2),
+.photo-box:nth-child(11),
+.photo-box:nth-child(14){
+	@media (min-width: $lg){
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+}
+
+.photo-box:nth-child(5),
+.photo-box:nth-child(8),
+.photo-box:nth-child(16),
+.photo-box:nth-child(21){
+	@media(max-width: $lg){
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+}
+.fullscreen{
+	background: rgba($one,.7);
+	z-index: 9;
+	position: fixed;
+	top:0;
+	bottom: 0;
+	width: 100%;
+	max-width: $xxl;
+	height: 100%;
+	vertical-align: middle;
+	display: none;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	span{
+		font-size: 3em;
+		color: $two;
+		@media (min-width: $xl){
+			font-size: 4em;
+		}
+	}
+}
+.btn{
+	background: transparent;
+	cursor: pointer;
+	position: absolute;
+	z-index: 99;
+	border-width: 0;
+}
+.btn-close{
+	@extend .btn;
+	top: 3em;
+	right: 1em;
+	@media(min-width: $lg){
+		right: 2em;
+	}
+}
+.btn-left{
+	@extend .btn;
+	top: 50%;
+	left: 1em;
+	@media(min-width: $lg){
+		left: 2em;
+	}
+}
+.btn-right{
+	@extend .btn;
+	top: 50%;
+	right: 1em;
+	@media(min-width: $lg){
+		right: 2em;
+	}
+}
+.description-box{
+	position: absolute;
+	z-index: 1;
+	bottom: 1em;
+	right: 1em;
+	width: 19em;
+	background: rgba($three,.7);
+	@media(min-width: $lg){
+		width: 32em;
+	}
+}
+.description-mobile{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	background: rgba($three,.7);
+	text-align: center;
+}
+.description{
+	display: none;
+	color: #fff;
+	padding: 1em;
+	margin: 0;
+	font-size: 1.1em;
+	@media(max-width: $sm) and (orientation: portrait){
+		position: relative;
+    	top: 50%;
+    	transform: translateY(-50%);
+	}
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.photos-box{
+		display: block;
+		text-align: center;
+	}
+	.photo-box{
+		width: 420px;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 5px;
+		@media(max-width: 450px){
+			width: 300px;
+		}
+	}
+}
