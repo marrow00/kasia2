@@ -13,11 +13,17 @@
 </head>
 <body>
     <nav>
-        <a href="" class="navbar-item">główna</a>
-        <a href="#dydaktyka" class="navbar-item">dydaktyka</a>
-        <a href="#artykuly" class="navbar-item">artykuły</a>
-        <a href="hobby.html" class="navbar-item">hobby</a>
-        <a href="#kontakt" class="navbar-item">kontakt</a>
+        <button id="menu-button">
+            <span></span>
+            <span></span>
+        </button>
+        <div id="menu">
+            <a href="">główna</a>
+            <a href="#dydaktyka">dydaktyka</a>
+            <a href="#artykuly">artykuły</a>
+            <a href="/hobby.html">hobby</a>
+            <a href="#kontakt">kontakt</a>
+        </div>
     </nav>
     <section class="home">
         <div class="home-info">
@@ -219,6 +225,7 @@
             el.style.transform = 'translateX(-'+ (0.5*window.scrollY) + 'px)'
         })
     </script>
+    <script src="js/nav.js"></script>
     <script src="js/articles.js"></script>
 </body>
 </html>

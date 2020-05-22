@@ -5,7 +5,6 @@ h1{
     color: $two;
     font-family: $headingFont;
 }
-
 .img-fluid{
     max-width: 100%;
     height: auto;
@@ -97,6 +96,7 @@ h1{
         white-space: nowrap;
         color: $one;
         z-index: 3;
+        mix-blend-mode: difference;
         &:before{
             content:'';
             position: absolute;
@@ -260,6 +260,7 @@ h1{
         display: block;
         padding: 1em 0;
         color: $two;
+        mix-blend-mode: multiply;
         span{
             padding-right: .5em;
         }
