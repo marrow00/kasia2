@@ -6,7 +6,6 @@ html{
     font-size: 16px;
     max-width: $xxl;
     margin: 0 auto;
-    box-shadow: 0 0 3em 3em $one;
     @media (min-width: $xl){
         font-size: 18px;
     }
@@ -16,6 +15,7 @@ html{
 }
 body{
     font-family: $bodyFont;
+    box-shadow: 0 0 3em 3em $one;
 }
 a{
     color: $three;
