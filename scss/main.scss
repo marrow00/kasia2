@@ -39,10 +39,14 @@ h1{
         color:$three;
         margin: 0 0 -.5em 1.8em;
     }
+    @media(min-width: 439px){
+        &:before{
+            height: 4em;
+        }
+    }
     @media(min-width: $sm){
         padding: 8em 0 0 12em;
         &:before{
-            height: 4em;
             top: 8em;
         }
     }
@@ -54,6 +58,12 @@ h1{
             height: 6em;
             top: 7em;
             width: 12em;
+        }
+    }
+    @media(min-width: $xxl){
+        padding: 12em 0 0 16em;
+        &:before{
+            top: 11em;   
         }
     }
 }
