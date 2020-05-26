@@ -13,7 +13,10 @@ h1{
     position: relative;
     height: 100vh;
     min-height: 500px;
-    max-height: 1000px;
+    max-height: 800px;
+    @media(min-width: $sm){
+        max-height: 1000px;
+    }
 }
 .home-info{
     position: relative;
@@ -56,27 +59,36 @@ h1{
 }
 .home-img{
     position: absolute;
-    // top: 3em;
     right: 0;
     width: auto;
     z-index: 2;
-    img{
-        max-height: 18em;
-    }
-    @media(min-width: $sm){
+    top: 25%;
+    @media only screen and (min-width: 568px) and (orientation:landscape){
         top: 0;
     }
-    @media only screen and (min-width: $lg) and (orientation:landscape){
-        img{
-            max-height: 20em;
-        }
-    }
     @media(min-width: $lg){
+        top: 4em;
         img{
             max-height: none;
         }
     }
-    
+}
+// iphoneX, pixel2xl
+@media only screen and (max-device-width: 823px) and (orientation:landscape){
+    .home-info{
+        padding: 8em 0 0 12em;
+    }
+    .home-img{
+        img{
+            max-height: calc(500px - 5em);
+        }
+    }
+}
+// ipad
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .home-img{
+        top: 22%;
+    } 
 }
 .banner{
     position: absolute;
