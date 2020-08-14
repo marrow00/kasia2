@@ -1,5 +1,4 @@
 @import "const";
-
 h1{
     font-size: 2.5rem;
     color: $two;
@@ -22,7 +21,6 @@ h1{
     position: relative;
     padding: 4em 0 0 6em;
     z-index: 3; 
-    // mix-blend-mode: multiply;
     &:before{
         content: "";
         display: block;
@@ -45,15 +43,16 @@ h1{
         }
     }
     @media(min-width: $sm){
-        padding: 8em 0 0 12em;
+        padding: 8em 0 0 6em;
         &:before{
             top: 8em;
         }
     }
     @media(min-width: $md){
-        padding: 8em 0 0 16em;
+        padding: 8em 0 0 12em;
     }
     @media(min-width: $xl){
+        padding: 8em 0 0 16em;
         &:before{
             height: 6em;
             top: 7em;
@@ -72,19 +71,22 @@ h1{
     right: 0;
     width: auto;
     z-index: 2;
-    top: 25%;
+    // top: 25%;
+    top: 50%;
+    transform: translateY(-50%);
     @media only screen and (min-width: 568px) and (orientation:landscape){
-        top: 0;
+        // top: 0;
+        transform: translateY(-60%);
     }
     @media(min-width: $lg){
-        top: 4em;
+        // top: 4em;
         img{
             max-height: none;
         }
     }
 }
 // iphoneX, pixel2xl
-@media only screen and (max-device-width: 823px) and (orientation:landscape){
+@media only screen and (max-width: 823px) and (orientation:landscape){
     .home-info{
         padding: 8em 0 0 12em;
     }
@@ -95,11 +97,11 @@ h1{
     }
 }
 // ipad
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
-    .home-img{
-        top: 22%;
-    } 
-}
+// @media only screen and (min-width : 768px) and (max-width : 1024px){
+//     .home-img{
+//         top: 24%;
+//     } 
+// }
 .banner{
     position: absolute;
     display: flex;
@@ -237,13 +239,28 @@ h1{
             vertical-align: middle;
             line-height: 70px;
             letter-spacing: 3px;
-            padding: 0 .5em;
+            padding: 0;
+            border: none;
             position: relative;
+            background-color: transparent;
+            transition: background-color 1000ms linear;
             cursor: pointer;
+            &:hover, &:focus{
+                border: none;
+                background-color: rgba($two, .8);
+                outline: $three;
+            }
+            &:active{
+                border: none;
+                background-color: $two;
+            }
             span{
                 display: inline-block;
                 vertical-align: middle;
+                padding: 0 .5em;
                 position: relative;
+                font-family: $headingFont;
+                font-size: 1.3em;
                 z-index: 1;
                 transform: rotate(180deg);
             }
@@ -265,7 +282,7 @@ h1{
             display: none;
             height: auto;
             p{
-                font-weight: .9em;
+                font-weight: .9;
                 padding-bottom: 1em;
                 line-height: 1.5em;
             }
@@ -286,7 +303,35 @@ h1{
     background-image: url(../img/contact.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #f7f7f7;
+    background-color: $one;
+    position: relative;
+    .contact-header{
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        line-height: 1em;
+        margin: 0;
+        font-family: $headingFont;
+        @media (min-width: $sm){
+            display: inline-block;
+            right: .25em;
+            font-size: 6em;
+        }
+        @media (min-width: $md){
+            font-size: 8.5em;
+        }
+        @media (min-width: $lg){
+            right: 1em;
+        }
+        @media (min-width: $xl){
+            font-size: 9.5em;
+        }
+        @media(min-width: $xxl){
+            right: 1.5em;
+        }
+    }
     a{
         white-space: nowrap;
         display: block;
@@ -302,3 +347,42 @@ h1{
         text-align: center;
     }
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tnnq0f');
+    src:  url('../fonts/icomoon.eot?tnnq0f#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tnnq0f') format('truetype'),
+      url('../fonts/icomoon.woff?tnnq0f') format('woff'),
+      url('../fonts/icomoon.svg?tnnq0f#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-map-marker:before {
+    content: "\e900";
+  }
+  .icon-envelope:before {
+    content: "\e903";
+  }
+  .icon-phone:before {
+    content: "\e904";
+  }
+  .icon-keyboard_arrow_right:before {
+    content: "\e907";
+  }
+  .icon-keyboard_arrow_left:before {
+    content: "\e901";
+  }
+  .icon-close:before {
+    content: "\e902";
+  }
