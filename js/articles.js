@@ -29,8 +29,8 @@ const checkYear = function(){
 
 const setArticlesHeight = function(){
     let artBody = artContent[0].clientHeight + artHeader.clientHeight;
-    if (artBody < yearsBox[0].clientWidth){
-        artSection[0].setAttribute('style','height:'+yearsBox[0].clientWidth+'px');
+    if (artBody < yearsBox[0].clientHeight){
+        artSection[0].setAttribute('style','height:'+yearsBox[0].clientHeight+'px');
     }else{
         artSection[0].setAttribute('style','height:'+ artBody +'px');
     }

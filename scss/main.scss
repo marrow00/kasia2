@@ -211,7 +211,7 @@ h1{
 
 .articles{
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     h2{
         font-size: 3em;
         font-family: $headingFont;
@@ -221,18 +221,20 @@ h1{
     .articles-years{
         position: absolute;
         top: 0;
-        left: 70px;
-        padding: 0 1em 0 4em ;
-        text-transform: uppercase;
-        transform: rotate(90deg);
-        transform-origin: left top 0;
+        left: 0;
+        padding: 4em 0 .5em 0;
+        // left: 70px;
+        // padding: 0 1em 0 4em ;
+        // text-transform: uppercase;
+        // transform: rotate(90deg);
+        // transform-origin: left top 0;
         z-index: 10;
         background: $one;
         &:before{
             content:'';
             position: relative;
+            display: block;
             width: 100%;
-
         }
         .articles-year{
             display: table-cell;
@@ -241,6 +243,7 @@ h1{
             letter-spacing: 3px;
             padding: 0;
             border: none;
+            appearance: none;
             position: relative;
             background-color: transparent;
             transition: background-color 1000ms linear;
@@ -262,7 +265,8 @@ h1{
                 font-family: $headingFont;
                 font-size: 1.3em;
                 z-index: 1;
-                transform: rotate(180deg);
+                // transform: rotate(180deg);
+                transform: rotate(-90deg);
             }
         }
         .active{
