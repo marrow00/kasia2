@@ -11,18 +11,23 @@ const checkClass = function(element, list){
 const removeActive = function(list){
     list.forEach(element => element.classList.remove("active"))
 }
+const removeSelected = function(list){
+    list.forEach(element => element.setAttribute('aria-selected', false))
+}
 const checkYear = function(){
     let year = this.innerText;
     let yearContent = content.filter(yearArticles => checkClass(year, yearArticles.classList))[0];
     let isActive = checkClass("active", yearContent.classList);
     let activeYear = checkClass("active", this.classList);
     if(!isActive){
-        removeActive(content)
-        yearContent.classList.add("active")
-    }
+        removeActive(content);
+        yearContent.classList.add("active");
     if(!activeYear){
-        removeActive(years)
-        this.classList.add("active")
+        removeActive(years);
+        removeSelected(years);
+        this.classList.add("active");
+        this.setAttribute('aria-selected', true);
+    }
     }
     else return
 }

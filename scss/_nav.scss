@@ -34,7 +34,7 @@ nav{
             }
         }
     }
-    div{
+    ul{
         display: none;
         position: absolute;
         top: 0;
@@ -44,6 +44,7 @@ nav{
         justify-content: space-evenly;
         flex-direction: column;
         padding: 3em 0 0 1em;
+        margin: 0;
         background: white;
         a{
             padding: 0 .5em;
@@ -60,7 +61,7 @@ nav{
         min-width: 50%;
         padding: 1em 5em;
         background: white;
-        div{
+        ul{
             position: initial;
             height: auto;
             width: auto;

@@ -34,7 +34,7 @@ h1{
         line-height: 1em;
     }
     p{
-        color: #9e9e9e;
+        color: $three;
         margin: 0 0 -.5em 1.8em;
     }
     @media(min-width: 439px){
@@ -158,7 +158,7 @@ h1{
     h2{
         display: none;
         position: absolute;
-        right: 0;
+        right: -.5em;
         font-size: 4em;
         color: $one;
         line-height: 1em;
@@ -211,7 +211,6 @@ h1{
 
 .articles{
     position: relative;
-    // overflow: hidden;
     h2{
         font-size: 3em;
         font-family: $headingFont;
@@ -223,11 +222,6 @@ h1{
         top: 0;
         left: 0;
         padding: 4em 0 .5em 0;
-        // left: 70px;
-        // padding: 0 1em 0 4em ;
-        // text-transform: uppercase;
-        // transform: rotate(90deg);
-        // transform-origin: left top 0;
         z-index: 10;
         background: $one;
         &:before{
@@ -238,12 +232,10 @@ h1{
         }
         .articles-year{
             display: block;
-            // vertical-align: middle;
             line-height: 70px;
             letter-spacing: 3px;
             padding: 0;
             border: none;
-            // appearance: none;
             position: relative;
             background-color: transparent;
             transition: background-color 1000ms linear;
@@ -265,7 +257,6 @@ h1{
                 font-family: $headingFont;
                 font-size: 1.3em;
                 z-index: 1;
-                // transform: rotate(180deg);
                 transform: rotate(-90deg);
             }
         }
@@ -286,7 +277,6 @@ h1{
             display: none;
             height: auto;
             p{
-                font-weight: .9;
                 padding-bottom: 1em;
                 line-height: 1.5em;
             }
