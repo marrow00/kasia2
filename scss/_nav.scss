@@ -28,9 +28,11 @@ nav{
         }
         .menu-open{
             transform: rotateZ(-45deg);
+            transform-origin: center;
+            margin-bottom: .25em;
             &:first-child{
-                transform: rotateZ(45deg);
-                margin: 10px 0 0 0;
+                transform: translateY(.25em) rotateZ(45deg);   
+                margin: 0;
             }
         }
     }
