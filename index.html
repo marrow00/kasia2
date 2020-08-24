@@ -2,44 +2,44 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta description="Katarzyna Gwóźdź - doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katarzyna Gwóźdź - doktorantka na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej | Labview | Laboratorium | Fizyka">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://if.pwr.edu.pl/~gwozdz/">
-    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Katarzyna Gwóźdź | WPPT, PWR</title>
 </head>
 <body>
-    <nav>
-        <button id="menu-button">
+    <nav aria-label="Menu">
+        <button id="menu-button" aria-label="Przycisk menu">
             <span></span>
             <span></span>
         </button>
-        <div id="menu">
-            <a href=".">główna</a>
-            <a href="#dydaktyka">dydaktyka</a>
-            <a href="#artykuly">artykuły</a>
-            <a href="./hobby.html">hobby</a>
-            <a href="#kontakt">kontakt</a>
-        </div>
+        <ul id="menu" role="menubar">
+            <a href="." role="menuitem">główna</a>
+            <a href="#dydaktyka" role="menuitem">dydaktyka</a>
+            <a href="#artykuly" role="menuitem">artykuły</a>
+            <a href="./hobby.html" role="menuitem">hobby</a>
+            <a href="#kontakt" role="menuitem">kontakt</a>
+        </ul>
     </nav>
     <section class="home">
         <div class="home-info">
             <p>doktorantka fizyki na WPPT</p>
-            <h1>Katarzyna Gwóźdź</h1>
+            <h1>Katarzyna <br> Gwóźdź</h1>
         </div>
         <div class="home-img">
             <picture>
-                <source media="(min-width: 992px)" srcset="img/kasia2.JPG">
-                <source media="(min-width: 768px)" srcset="img/kasia3.JPG">
-                <img src="img/kasia4.JPG" class="img-fluid">
+                <source media="(max-width: 767px)" srcset="img/katarzynagwozdz400.jpg">
+                <source media="(max-width: 991px)" srcset="img/katarzynagwozdz600.jpg">
+                <source media="(max-width: 1599px)" srcset="img/katarzynagwozdz750.jpg">
+                <img src="img/katarzynagwozdz900.jpg" alt="Katarzyna Gwóźdź" class="img-fluid">
             </picture>
         </div>
         <div class="banner">
             <div class="banner-img"></div>
-            <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" role="button">wyślij wiadomość</a>                   
+            <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" role="button" aria-label="Email">wyślij wiadomość</a>                   
         </div>
     </section>
     <section class="teaching" id="dydaktyka">
@@ -61,16 +61,16 @@
     </section>
     <section class="articles" id="artykuly">
         <h2 id="articles-header">artykuły</h2>
-        <div class="articles-years">
-            <div class="articles-year active"><span>2020</span></div>
-            <div class="articles-year"><span>2019</span></div>
-            <div class="articles-year"><span>2018</span></div>
-            <div class="articles-year"><span>2017</span></div>
-            <div class="articles-year"><span>2016</span></div>
-            <div class="articles-year"><span>2015</span></div>
+        <div class="articles-years" role="tablist">
+            <button class="articles-year active" role="tab" aria-selected="true" aria-controls="articles_2020"><span>2020</span></button>
+            <button class="articles-year" role="tab" aria-selected="false" aria-controls="articles_2019"><span>2019</span></button>
+            <button class="articles-year" role="tab" aria-selected="false" aria-controls="articles_2018"><span>2018</span></button>
+            <button class="articles-year" role="tab" aria-selected="false" aria-controls="articles_2017"><span>2017</span></button>
+            <button class="articles-year" role="tab" aria-selected="false" aria-controls="articles_2016"><span>2016</span></button>
+            <button class="articles-year" role="tab" aria-selected="false" aria-controls="articles_2015"><span>2015</span></button>
         </div>
         <div class="articles-content">
-            <div class="articles-content_year 2020 active">
+            <div id="articles_2020" class="articles-content_year 2020 active" role="tabpanel">
                 <p>
                     J. Silva, C. Almeida Marques, A. S. Viana, L. F. Santos, <b>K. Gwóźdź</b>, E. Popko, J. P. Connolly, K. Veltruská, V. Matolín, O. Conde, 
                     <i>"Morphological, optical and photovoltaic characteristics of MoSe2/SiOx/Si heterojunctions"</i>, 
@@ -82,7 +82,7 @@
                     Optical Materials 100, 109709 (2020)
                 </p>
             </div>
-            <div class="articles-content_year 2019">
+            <div id="articles_2019" class="articles-content_year 2019" role="tabpanel">
                 <p>
                     <b>K. Gwóźdź</b>, Vl. Kolkovsky, J. Weber, A. A. Yakovleva, Y. A. Astrov, 
                     <i>"Detection of sulfur-related defects in sulfur diffused n- and p-type Si by DLTS"</i>, 
@@ -99,7 +99,7 @@
                     Applied Sciences 9(4), 717 (2019)
                 </p>
             </div>
-            <div class="articles-content_year 2018">
+            <div id="articles_2018" class="articles-content_year 2018" role="tabpanel">
                 <p>
                     <b>K. Gwóźdź</b> , Vl. Kolkovsky, V. Kolkovsky, J. Weber,
                     <i>“Revised identification of the G-levels in gold doped Si by Laplace deep level transient spectroscopy”</i>, 
@@ -128,7 +128,7 @@
                    <i>“Quasi Fermi level scan of band gap energy in photojunction”</i>, Acta Physica Polonica A 134(2), 590-595 (2018)
                 </p>
             </div>
-            <div class="articles-content_year 2017">
+            <div id="articles_2017" class="articles-content_year 2017" role="tabpanel">
                 <p>
                     M. Lipiński, R. P. Socha, A. Kędra, K. Gawlińska, G. Kulesza-Matlak, Ł. Major, K. Drabczyk, K. Łaba, Z. Starowicz, <b>K. Gwóźdź</b>, A. Góral, E. Popko, 
                     <i>„Studying of Perovskite Nanoparticles in PMMA Matrix Used As Light Converter for Silicon Solar Cell”</i>, 
@@ -164,7 +164,7 @@
                     Journal of Alloys and Compounds 691, 946-951
                 </p>
             </div>
-            <div class="articles-content_year 2016">
+            <div id="articles_2016" class="articles-content_year 2016" role="tabpanel">
                 <p>
                     <b>K. Gwóźdź</b>, E. Płaczek-Popko, Z. Gumienny, E. Zielony, R. Pietruszka, B. S. Witkowski, Ł. Wachnicki, S. Gierałtowska, M. Godlewski, L.-B. Chang, 
                     <i>„Si/ZnO nanorods with Ag nanoparticles/AZO heterostructures in PV applications”</i>, 
@@ -186,7 +186,7 @@
                     Solar Energy Materials and Solar Cells 147, 1-16
                 </p>
             </div>
-            <div class="articles-content_year 2015">
+            <div id="articles_2015" class="articles-content_year 2015" role="tabpanel">
                 <p>
                     R. Pietruszka, B. S. Witkowski, S. Gieraltowska, P. Caban, L. Wachnicki, E. Zielony, <b>K. Gwóźdź</b>, P. Biegański, E. Płaczek-Popko, M. Godlewski 
                     <i>„New efficient solar cell structures based on zinc oxide nanorods”</i>, 
@@ -201,22 +201,23 @@
         </div>
     </section>
     <section class="contact" id="kontakt">
-        <a target="_blank" rel="noopener" href="https://www.google.pl/maps/place/A-1,+wybrze%C5%BCe+Stanis%C5%82awa+Wyspia%C5%84skiego+27,+50-370+Wroc%C5%82aw/@51.1077021,17.0615193,18z/data=!3m1!4b1!4m5!3m4!1s0x470fe82a73eb172f:0x1c6df8655655e3c2!8m2!3d51.1078939!4d17.0616995" class="contact-content">
+        <h2 class="contact-header">kontakt</h2>
+        <a target="_blank" rel="noopener" aria-label="Miejsce" href="https://www.google.pl/maps/place/A-1,+wybrze%C5%BCe+Stanis%C5%82awa+Wyspia%C5%84skiego+27,+50-370+Wroc%C5%82aw/@51.1077021,17.0615193,18z/data=!3m1!4b1!4m5!3m4!1s0x470fe82a73eb172f:0x1c6df8655655e3c2!8m2!3d51.1078939!4d17.0616995" class="contact-content">
             <span class="icon-map-marker"></span>
             231a A1
         </a>
-        <a href="tel:+48713202642" class="contact-content">
+        <a href="tel:+48713202642" class="contact-content" aria-label="Telefon">
             <span class="icon-phone"></span>
             +48 71 320 26 42
         </a>
-        <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" class="contact-content">
+        <a href="mailto:katarzyna.r.gwozdz@pwr.edu.pl" class="contact-content" aria-label="Email">
             <span class="icon-envelope"></span>
             katarzyna.r.gwozdz@pwr.edu.pl
         </a>
     </section>
     <footer>
-        <a target="_blank" rel="noopener" href="http://lpf.wppt.pwr.edu.pl/index.php">LPF</a>
-        <a target="_blank" rel="noopener" href="http://www.leps.pwr.edu.pl/index.php">LEPS</a>
+        <a target="_blank" rel="noopener" href="http://lpf.wppt.pwr.edu.pl/index.php" aria-label="Laboratorium Podstaw Fizyki">LPF</a>
+        <a target="_blank" rel="noopener" href="http://www.leps.pwr.edu.pl/index.php" aria-label="Laboratorium Właściwości Elektrycznych Półprzewodników">LEPS</a>
         <p>K.R.G., 2020</p>
     </footer>
     <script>

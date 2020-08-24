@@ -28,13 +28,15 @@ nav{
         }
         .menu-open{
             transform: rotateZ(-45deg);
+            transform-origin: center;
+            margin-bottom: .25em;
             &:first-child{
-                transform: rotateZ(45deg);
-                margin: 10px 0 0 0;
+                transform: translateY(.25em) rotateZ(45deg);   
+                margin: 0;
             }
         }
     }
-    div{
+    ul{
         display: none;
         position: absolute;
         top: 0;
@@ -44,6 +46,7 @@ nav{
         justify-content: space-evenly;
         flex-direction: column;
         padding: 3em 0 0 1em;
+        margin: 0;
         background: white;
         a{
             padding: 0 .5em;
@@ -60,7 +63,7 @@ nav{
         min-width: 50%;
         padding: 1em 5em;
         background: white;
-        div{
+        ul{
             position: initial;
             height: auto;
             width: auto;

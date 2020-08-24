@@ -11,26 +11,31 @@ const checkClass = function(element, list){
 const removeActive = function(list){
     list.forEach(element => element.classList.remove("active"))
 }
+const removeSelected = function(list){
+    list.forEach(element => element.setAttribute('aria-selected', false))
+}
 const checkYear = function(){
     let year = this.innerText;
     let yearContent = content.filter(yearArticles => checkClass(year, yearArticles.classList))[0];
     let isActive = checkClass("active", yearContent.classList);
     let activeYear = checkClass("active", this.classList);
     if(!isActive){
-        removeActive(content)
-        yearContent.classList.add("active")
-    }
+        removeActive(content);
+        yearContent.classList.add("active");
     if(!activeYear){
-        removeActive(years)
-        this.classList.add("active")
+        removeActive(years);
+        removeSelected(years);
+        this.classList.add("active");
+        this.setAttribute('aria-selected', true);
+    }
     }
     else return
 }
 
 const setArticlesHeight = function(){
     let artBody = artContent[0].clientHeight + artHeader.clientHeight;
-    if (artBody < yearsBox[0].clientWidth){
-        artSection[0].setAttribute('style','height:'+yearsBox[0].clientWidth+'px');
+    if (artBody < yearsBox[0].clientHeight){
+        artSection[0].setAttribute('style','height:'+yearsBox[0].clientHeight+'px');
     }else{
         artSection[0].setAttribute('style','height:'+ artBody +'px');
     }
