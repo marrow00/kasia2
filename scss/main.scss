@@ -37,19 +37,19 @@ h1{
         color: $three;
         margin: 0 0 -.5em 1.8em;
     }
-    @media(min-width: 439px){
-        &:before{
-            height: 4em;
-        }
-    }
-    @media(min-width: $sm){
-        padding: 8em 0 0 6em;
-        &:before{
-            top: 8em;
-        }
-    }
+    // @media(min-width: 439px){
+    //     &:before{
+    //         height: 4em;
+    //     }
+    // }
+    // @media(min-width: $sm){
+    //     padding: 8em 0 0 6em;
+    //     &:before{
+    //         top: 8em;
+    //     }
+    // }
     @media(min-width: $md){
-        padding: 8em 0 0 12em;
+        padding: 8em 0 0 8em;
     }
     @media(min-width: $xl){
         padding: 8em 0 0 16em;
@@ -71,15 +71,13 @@ h1{
     right: 0;
     width: auto;
     z-index: 2;
-    // top: 25%;
     top: 50%;
     transform: translateY(-50%);
-    @media only screen and (min-width: 568px) and (orientation:landscape){
-        // top: 0;
-        transform: translateY(-60%);
-    }
+    // @media only screen and (min-width: 568px) and (orientation:landscape){
+    //     // top: 0;
+    //     transform: translateY(-60%);
+    // }
     @media(min-width: $lg){
-        // top: 4em;
         img{
             max-height: none;
         }
@@ -87,21 +85,12 @@ h1{
 }
 // iphoneX, pixel2xl
 @media only screen and (max-width: 823px) and (orientation:landscape){
-    .home-info{
-        padding: 8em 0 0 12em;
-    }
     .home-img{
         img{
-            max-height: calc(500px - 5em);
+            max-height: calc(450px - 5em);
         }
     }
 }
-// ipad
-// @media only screen and (min-width : 768px) and (max-width : 1024px){
-//     .home-img{
-//         top: 24%;
-//     } 
-// }
 .banner{
     position: absolute;
     display: flex;
@@ -167,7 +156,7 @@ h1{
         font-family: $headingFont;
     }
     a{
-        min-width: 100%;
+        min-width: 90%;
         min-height: 7em;
         display: flex;
         justify-content: center;
