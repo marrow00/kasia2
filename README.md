@@ -1,1 +1,1 @@
-new version of Kasia's website
+Minimalist website for a scientist with broken, asymetrical layout and massive headings in the background for a modern look.
